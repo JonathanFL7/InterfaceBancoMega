@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: #D1D1D1
+    ;
+}
+
+.main {
+    font-family: Poppins;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: #F2F2F2;
+    padding: 0px 20px;
+    position: fixed;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.menu .logo::before{
+    content: '';
+    background: url('../images/banco-next-svgrepo-com.svg') no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.menu .links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    color: #585859;
+}
+
+.menu .links .item{
+    margin-left: 20px;
+}
+
+.menu .links .item:hover{
+    text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.4)
+}
+
+
+.menu .links .star{
+    background-color: #F2AE2E;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.menu .links .star:hover{
+    background-color: darkorange;
+}
+
+@media (max-width: 750px) {
+
+    .menu{
+        flex-direction: column;
+        text-transform: uppercase;
+        font-size: 20px;
+        height: auto;
+        font-weight: 400;
+    }
+
+    .menu .links {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .menu{
+        flex-direction: column;
+        text-transform: uppercase;
+        font-size: 20px;
+        height: 100vh;
+        font-weight: 500;
+    }
+    
+    .menu .logo {
+        margin-top: 50%;
+        font-size: 40px;
+    }
+    
+    .menu .links {
+        flex-direction: column;
+        gap: 30px;
+        font-size: 30px;
+        margin-bottom: 50%;
+    }
+
+    .menu .links .star{
+        border-radius: 10px;
+    }
+
+}
